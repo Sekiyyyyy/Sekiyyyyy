@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="48" viewBox="0 0 200 48" role="img" aria-label="Javascript Status">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#050b0d"/>
+      <stop offset="55%"  stop-color="#0a1418"/>
+      <stop offset="100%" stop-color="#0a1c1f"/>
+    </linearGradient>
+
+    <!-- edge dipadukan: cyan tema -> kuning JS (resmi) -> cyan tema -->
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#06b6d4"/>
+      <stop offset="45%"  stop-color="#67e8f9"/>
+      <stop offset="55%"  stop-color="#F7DF1E"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.1"/>
+    </filter>
+
+    <clipPath id="clip">
+      <rect x="1.5" y="1.5" width="197" height="45" rx="10"/>
+    </clipPath>
+
+    <pattern id="grid" width="13" height="13" patternUnits="userSpaceOnUse">
+      <path d="M13 0H0V13" fill="none" stroke="#22d3ee" stroke-width="0.4" opacity="0.055"/>
+    </pattern>
+
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="45%"  stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="55%"  stop-color="#fff"    stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- chip icon: tint kuning tipis dipadukan ke gelap tema -->
+    <radialGradient id="chip" cx="35%" cy="30%" r="80%">
+      <stop offset="0%"  stop-color="#F7DF1E" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#0a1418" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- body -->
+  <rect x="1.5" y="1.5" width="197" height="45" rx="10" fill="url(#bg)"/>
+  <rect x="1.5" y="1.5" width="197" height="45" rx="10" fill="url(#grid)"/>
+
+  <!-- glowing edge (blended) -->
+  <g filter="url(#glow)">
+    <rect x="1.5" y="1.5" width="197" height="45" rx="10"
+          fill="none" stroke="url(#edge)" stroke-width="1.5" opacity="0.9">
+      <animate attributeName="opacity" values="0.55;1;0.55" dur="3.4s"
+               begin="1.05s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- travelling light sweep -->
+  <g clip-path="url(#clip)">
+    <rect x="-200" y="0" width="200" height="48" fill="url(#sweep)">
+      <animate attributeName="x" from="-200" to="200" dur="4.2s"
+               begin="1.05s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#22d3ee" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.95">
+    <path d="M8 16V10a3 3 0 0 1 3-3h5"/>
+    <path d="M192 16V10a3 3 0 0 0-3-3h-5"/>
+    <path d="M8 32v6a3 3 0 0 0 3 3h5"/>
+    <path d="M192 32v6a3 3 0 0 1-3 3h-5"/>
+  </g>
+
+  <!-- icon chip: background tint tema+bahasa, logo asli via image -->
+  <g transform="translate(16 12)">
+    <rect x="-3" y="-3" width="30" height="30" rx="8" fill="url(#chip)"/>
+    <rect x="0" y="0" width="24" height="24" rx="5" fill="#0a1418" stroke="#22d3ee" stroke-width="0.75" opacity="0.9"/>
+    <image href="https://cdn.simpleicons.org/javascript/F7DF1E" x="3" y="3" width="18" height="18"/>
+  </g>
+
+  <!-- label -->
+  <text x="52" y="29.0" font-family="'Fira Code','JetBrains Mono',ui-monospace,monospace"
+        font-size="14.5" font-weight="700" letter-spacing="2.4" fill="#22d3ee">Javascript</text>
+
+  <!-- DECORATION: Animated Tech Nodes -->
+  <g fill="#22d3ee">
+    <rect x="158" y="22" width="4" height="4" rx="1" opacity="0.2">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" begin="0s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="168" y="22" width="4" height="4" rx="1" opacity="0.2">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="178" y="22" width="4" height="4" rx="1" opacity="0.2">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" begin="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
