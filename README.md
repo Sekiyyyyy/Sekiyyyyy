@@ -26,7 +26,7 @@
 <div align="center">
     <img width="100%" src="header.svg" />
     <br/>
-    <a href="https://instagram.com/rzky_noo"><img src="instagram.svg" height="78"/></a>&nbsp;
-    <a href="https://www.tiktok.com/@detakaraa_"><img src="tiktok.svg" height="78"/></a>&nbsp;
-    <a href="https://discord.gg/4T67y6P5z"><img src="discord.svg" height="78"/></a>&nbsp;
+    <a href="https://instagram.com/rzky_noo"><img src="instagram.svg" height="68"/></a>&nbsp;
+    <a href="https://www.tiktok.com/@detakaraa_"><img src="tiktok.svg" height="68"/></a>&nbsp;
+    <a href="https://discord.gg/4T67y6P5z"><img src="discord.svg" height="68"/></a>&nbsp;
 </div>
