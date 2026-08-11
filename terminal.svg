@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="140" viewBox="0 0 650 140" role="img">
+  <defs>
+    <!-- Filter untuk efek glow pada garis yang berjalan -->
+    <filter id="glow-edge" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050b0d" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0a1c1f" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Gradien "Cyberpunk" yang mendekati tema warna kamu -->
+    <linearGradient id="cyber-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" />   <!-- Cyan terang -->
+      <stop offset="50%" stop-color="#818cf8" />  <!-- Indigo/Ungu muda -->
+      <stop offset="100%" stop-color="#2dd4bf" /> <!-- Teal/Tosca terang -->
+    </linearGradient>
+
+    <!-- Typing Animasi (Disesuaikan lebar teksnya) -->
+    <clipPath id="type-line-1">
+      <rect x="25" y="20" width="0" height="20">
+        <animate attributeName="width" values="0;135" begin="0.5s" dur="1.5s" fill="freeze" />
+      </rect>
+    </clipPath>
+
+    <clipPath id="type-line-2">
+      <rect x="25" y="45" width="0" height="20">
+        <!-- Disesuaikan untuk teks baru: "I am a Student & a Tech Enthusiast." -->
+        <animate attributeName="width" values="0;380" begin="2.5s" dur="1.5s" fill="freeze" />
+      </rect>
+    </clipPath>
+
+    <clipPath id="type-line-3">
+      <rect x="25" y="70" width="0" height="20">
+        <!-- Disesuaikan menjadi lebih lebar untuk menampung teks panjang -->
+        <animate attributeName="width" values="0;600" begin="4.5s" dur="3s" fill="freeze" />
+      </rect>
+    </clipPath>
+
+    <clipPath id="type-line-4">
+      <rect x="25" y="95" width="0" height="20">
+        <animate attributeName="width" values="0;450" begin="8.0s" dur="2s" fill="freeze" />
+      </rect>
+    </clipPath>
+  </defs>
+
+  <!-- Frame Background Putus-putus -->
+  <rect x="5" y="5" width="640" height="130" rx="8" fill="url(#bg-grad)" stroke="#22d3ee" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.5"/>
+  
+  <!-- ANIMASI GARIS CAHAYA BERJALAN (EDGE GLOW) -->
+  <rect x="5" y="5" width="640" height="130" rx="8" fill="none" 
+        stroke="url(#cyber-gradient)" stroke-width="2" 
+        stroke-dasharray="150 1400" stroke-linecap="round" filter="url(#glow-edge)">
+    <animate attributeName="stroke-dashoffset" values="1550;0" dur="4.5s" repeatCount="indefinite" />
+  </rect>
+
+  <!-- Corner Accents -->
+  <path d="M 5 20 L 5 5 L 20 5 M 630 5 L 645 5 L 645 20 M 645 120 L 645 135 L 630 135 M 20 135 L 5 135 L 5 120" fill="none" stroke="#67e8f9" stroke-width="2" opacity="0.8"/>
+
+  <!-- Terminal Text -->
+  <g font-family="'Consolas', 'Courier New', monospace" font-size="13.5" fill="#22d3ee">
+    
+    <!-- Line 1: whoami -->
+    <text x="30" y="35" opacity="0.8" clip-path="url(#type-line-1)">ky@dev:~$ <tspan fill="#fff" font-weight="bold">whoami</tspan></text>
+    
+    <!-- Line 2 -->
+    <text x="30" y="60" opacity="0.9" clip-path="url(#type-line-2)">
+      <tspan fill="#67e8f9">&gt;</tspan> I am a Student &amp; a Tech Enthusiast.
+    </text>
+
+    <!-- Line 3 -->
+    <text x="30" y="85" opacity="0.9" clip-path="url(#type-line-3)">
+      <tspan fill="#67e8f9">&gt;</tspan> Passionate about AI, automation, and building clean web experiences, 
+    </text>
+
+    <!-- Line 4 -->
+    <text x="30" y="110" opacity="0.9" clip-path="url(#type-line-4)">
+      <tspan fill="#67e8f9">&gt;</tspan> scalable, and visually striking digital experiences.
+    </text>
+  </g>
+</svg>

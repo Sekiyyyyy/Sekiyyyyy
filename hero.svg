@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="120" viewBox="0 0 900 120" role="img" aria-label="Rizky Alfianno">
+<title>Rizky Alfianno</title>
+<desc>Cyan themed header banner with glitching name, skills line, and achievements list.</desc>
+<defs>
+  <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%"   stop-color="#22d3ee" stop-opacity="0"/>
+    <stop offset="20%"  stop-color="#06b6d4"  stop-opacity="0.9"/>
+    <stop offset="50%"  stop-color="#67e8f9"/>
+    <stop offset="80%"  stop-color="#06b6d4"  stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+  </linearGradient>
+  <filter id="hglow" x="-40%" y="-140%" width="180%" height="380%">
+    <feGaussianBlur stdDeviation="3" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <clipPath id="clip1"><rect x="353" y="140" width="0" height="22"><animate attributeName="width" dur="9s" repeatCount="indefinite" calcMode="linear"
+    keyTimes="0;0.089;0.3;0.333;1" values="0;180;180;0;0"/></rect></clipPath>
+  <clipPath id="clip2"><rect x="302" y="166" width="0" height="22"><animate attributeName="width" dur="9s" repeatCount="indefinite" calcMode="linear"
+    keyTimes="0;0.333;0.422;0.633;0.667;1" values="0;0;260;260;0;0"/></rect></clipPath>
+  <clipPath id="clip3"><rect x="231" y="192" width="0" height="22"><animate attributeName="width" dur="9s" repeatCount="indefinite" calcMode="linear"
+    keyTimes="0;0.667;0.756;0.967;0.978;1" values="0;0;380;380;0;0"/></rect></clipPath>
+  <style>
+    @keyframes hglitch {
+      0%, 92%, 100% { transform: translate(0,0); opacity: 0; }
+      93% { transform: translate(-2px,1px); opacity: .6; }
+      95% { transform: translate(2px,-1px); opacity: .6; }
+      97% { transform: translate(-1px,0); opacity: .4; }
+    }
+  </style>
+</defs>
+
+<g filter="url(#hglow)">
+  <text x="450.0" y="52" text-anchor="middle"
+        font-family="'Fira Code','JetBrains Mono',ui-monospace,monospace"
+        font-size="30" font-weight="700" letter-spacing="9" fill="#22d3ee">RIZKY ALFIANNO</text>
+</g>
+<text x="447.0" y="52" text-anchor="middle"
+      font-family="'Fira Code','JetBrains Mono',ui-monospace,monospace"
+      font-size="30" font-weight="700" letter-spacing="9" fill="#67e8f9"
+      style="animation: hglitch 7s infinite;">RIZKY ALFIANNO</text>
+<text x="453.0" y="52" text-anchor="middle"
+      font-family="'Fira Code','JetBrains Mono',ui-monospace,monospace"
+      font-size="30" font-weight="700" letter-spacing="9" fill="#06b6d4"
+      style="animation: hglitch 7s infinite .1s;">RIZKY ALFIANNO</text>
+
+<text x="450.0" y="78" text-anchor="middle"
+      font-family="'Fira Code',ui-monospace,monospace"
+      font-size="12" letter-spacing="4" fill="#06b6d4">
+  // CREATIVE DEVELOPER &#183; TECH ENTHUSIAST &#183; AI &amp; AUTOMATION
+</text>
+
+<rect x="80" y="94" width="740" height="1.6" fill="url(#rule)">
+  <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+</rect>
+
+<g fill="#67e8f9">
+  <circle cx="150.0" cy="94.8" r="2.4">
+    <animate attributeName="cx" values="150.0;750.0;150.0"
+             dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="5s" repeatCount="indefinite"/>
+  </circle>
+</g>
+</svg>

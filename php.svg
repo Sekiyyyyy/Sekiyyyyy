@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="48" viewBox="0 0 120 48" role="img" aria-label="PHP Status">
+  <defs>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#06b6d4"/>
+      <stop offset="50%"  stop-color="#67e8f9"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <clipPath id="clip">
+      <polygon points="12,4 108,4 116,12 116,36 108,44 12,44 4,36 4,12" />
+    </clipPath>
+
+    <pattern id="grid" width="13" height="13" patternUnits="userSpaceOnUse">
+      <path d="M13 0H0V13" fill="none" stroke="#22d3ee" stroke-width="0.4" opacity="0.08"/>
+    </pattern>
+
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="45%"  stop-color="#22d3ee" stop-opacity="0.25"/>
+      <stop offset="55%"  stop-color="#fff"    stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Faint transparent background to hold effects without looking solid -->
+  <polygon points="12,4 108,4 116,12 116,36 108,44 12,44 4,36 4,12" fill="#050b0d" fill-opacity="0.3"/>
+  <polygon points="12,4 108,4 116,12 116,36 108,44 12,44 4,36 4,12" fill="url(#grid)"/>
+
+  <!-- Light Sweep Animation -->
+  <g clip-path="url(#clip)">
+    <rect x="-120" y="0" width="120" height="48" fill="url(#sweep)">
+      <animate attributeName="x" from="-120" to="120" dur="3.5s" begin="0.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Glowing Sci-Fi Brackets -->
+  <g filter="url(#glow)">
+    <path d="M 24 4 L 12 4 L 4 12 L 4 20 M 4 28 L 4 36 L 12 44 L 24 44 M 96 4 L 108 4 L 116 12 L 116 20 M 116 28 L 116 36 L 108 44 L 96 44"
+          fill="none" stroke="url(#edge)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  <!-- Core Crisp Brackets -->
+  <path d="M 24 4 L 12 4 L 4 12 L 4 20 M 4 28 L 4 36 L 12 44 L 24 44 M 96 4 L 108 4 L 116 12 L 116 20 M 116 28 L 116 36 L 108 44 L 96 44"
+        fill="none" stroke="#67e8f9" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Modern Tech Font -->
+  <text x="22" y="30" font-family="'Orbitron', 'Segoe UI', 'Helvetica Neue', sans-serif"
+        font-size="14.5" font-weight="800" letter-spacing="3" fill="#22d3ee">PHP</text>
+
+  <!-- 3 Animated Tech Nodes -->
+  <g fill="#22d3ee">
+    <rect x="74" y="22" width="4" height="4" rx="1" opacity="0.2">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" begin="0s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="84" y="22" width="4" height="4" rx="1" opacity="0.2">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="94" y="22" width="4" height="4" rx="1" opacity="0.2">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="1.5s" begin="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
