@@ -4,7 +4,7 @@
 </div>
 
 <div align="center">
-    <img width="100%" src="terminal.svg" />
+    <img width="90%" src="terminal.svg" />
 </div>
 
 <div align="center">
